@@ -1,0 +1,35 @@
+boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']
+girls = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
+while True:
+
+  while True:
+    name_boys = input("Введите имя парня: ")
+    if name_boys == '':
+      break
+    else:
+      boys.append(name_boys)
+    break
+  while True:
+    name_girls = input("Введите имя девушки: ")
+    if name_girls == '':
+      break
+    else:
+      girls.append(name_girls)
+    break
+  question = input("Узнаем кто кому подходит? :) ").lower()
+  if question == 'нет':
+      print("Введём новую пару :) ")
+        
+  else:
+    break
+
+man = len(boys)
+woman = len(girls)
+if man != woman:
+  print("Кто-то может остаться без пары :(")
+else:
+  x = sorted(boys)
+  y = sorted(girls)
+  for a, b in zip(x, y):
+    print(a, 'и', b)
+  
